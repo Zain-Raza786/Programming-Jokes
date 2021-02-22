@@ -26,9 +26,9 @@ struct ContentView: View {
             getJokes()
         })
         .alert(isPresented: $showingAlert, content: {
-            Alert(title: Text("Loading Error"))
-            message: Text("There was a problem loading the data"),
-            dismissButton: .default(Text"Ok")
+            Alert(title: Text("Loading Error"),
+                  message: Text("There was a problem loading the data"),
+                  dismissButton: .default(Text("Ok")))
         })
     }
     
@@ -50,7 +50,7 @@ struct ContentView: View {
                 }
             }
         }
-    showingAlert = true
+        showingAlert = true
     }
 }
 
